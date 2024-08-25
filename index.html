@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades CSS</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tema 1 - Texto</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Propiedad</th>
+                <th>Valor Inicial</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>color</td>
+                <td>depends on the browser/user agent</td>
+                <td>Define el color del texto. El valor puede ser un color en formato hexadecimal, RGB, HSL o con nombres de colores predefinidos.</td>
+            </tr>
+            <tr>
+                <td>font-family</td>
+                <td>depends on the browser</td>
+                <td>Establece la familia de fuentes para el texto. Puede ser una lista de fuentes separadas por comas, incluyendo fuentes específicas o genéricas.</td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>medium</td>
+                <td>Define el tamaño de la fuente del texto. Puede expresarse en unidades absolutas (px, pt) o relativas (em, rem, %).</td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>normal</td>
+                <td>Establece el grosor del texto. Los valores comunes son <code>normal</code>, <code>bold</code>, o valores numéricos que van de 100 a 900.</td>
+            </tr>
+            <tr>
+                <td>font-style</td>
+                <td>normal</td>
+                <td>Determina el estilo de la fuente, como <code>normal</code>, <code>italic</code>, o <code>oblique</code>.</td>
+            </tr>
+            <tr>
+                <td>font-variant</td>
+                <td>normal</td>
+                <td>Controla la variación del texto, como <code>small-caps</code> para convertir el texto en mayúsculas pequeñas.</td>
+            </tr>
+            <tr>
+                <td>font</td>
+                <td>depends on the browser</td>
+                <td>Es un shorthand que permite definir todas las propiedades relacionadas con la fuente (font-style, font-variant, font-weight, font-size, line-height, y font-family) en una sola línea.</td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>start o left dependiendo del lenguaje</td>
+                <td>Controla la alineación horizontal del texto dentro de su contenedor. Los valores incluyen <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>, y más.</td>
+            </tr>
+            <tr>
+                <td>line-height</td>
+                <td>normal</td>
+                <td>Establece la altura de la línea del texto. Puede expresarse en números, porcentajes, o unidades de longitud.</td>
+            </tr>
+            <tr>
+                <td>text-decoration</td>
+                <td>none</td>
+                <td>Controla las decoraciones del texto, como subrayado (<code>underline</code>), tachado (<code>line-through</code>), o ninguno (<code>none</code>).</td>
+            </tr>
+            <tr>
+                <td>text-transform</td>
+                <td>none</td>
+                <td>Manipula la capitalización del texto. Valores incluyen <code>uppercase</code> (mayúsculas), <code>lowercase</code> (minúsculas), y <code>capitalize</code> (primera letra en mayúscula).</td>
+            </tr>
+            <tr>
+                <td>vertical-align</td>
+                <td>baseline</td>
+                <td>Controla la alineación vertical de un elemento en relación a su contenedor. Usado comúnmente para imágenes y texto.</td>
+            </tr>
+            <tr>
+                <td>text-indent</td>
+                <td>0</td>
+                <td>Define la sangría de la primera línea de texto. Puede expresarse en unidades de longitud o porcentajes.</td>
+            </tr>
+            <tr>
+                <td>letter-spacing</td>
+                <td>normal</td>
+                <td>Ajusta el espacio entre las letras. Puede ser un valor positivo (más espaciado) o negativo (menos espaciado).</td>
+            </tr>
+            <tr>
+                <td>word-spacing</td>
+                <td>normal</td>
+                <td>Controla el espacio entre palabras. Similar a <code>letter-spacing</code>, pero para palabras completas.</td>
+            </tr>
+            <tr>
+                <td>white-space</td>
+                <td>normal</td>
+                <td>Controla cómo se maneja el espacio en blanco dentro de un elemento. Valores comunes incluyen <code>normal</code>, <code>nowrap</code>, y <code>pre</code>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Tema 2 - Enlaces</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>Propiedades</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tamaño, Color y Decoración</td>
+                <td>font-size, color, text-decoration</td>
+                <td>
+                    <ul>
+                        <li><strong>Tamaño:</strong> El tamaño de la fuente del enlace puede ser ajustado con <code>font-size</code>.</li>
+                        <li><strong>Color:</strong> El color del enlace se define con <code>color</code>, que puede variar dependiendo del estado del enlace (visitado, hover, etc.).</li>
+                        <li><strong>Decoración:</strong> La decoración, como el subrayado, se controla con <code>text-decoration</code>. Por defecto, los enlaces suelen estar subrayados (<code>underline</code>).</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Decoración Personalizada</td>
+                <td>text-decoration, :hover, :active, :visited</td>
+                <td>Permite personalizar la apariencia de los enlaces en diferentes estados (hover, active, visited) usando pseudo-clases. La propiedad <code>text-decoration</code> permite agregar o quitar decoraciones como subrayado, líneas superiores o inferiores, entre otras.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Tema 3 - Imágenes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>Propiedades</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anchura y Altura</td>
+                <td>width, height</td>
+                <td>Define las dimensiones de la imagen. Se puede usar valores absolutos (px, cm) o relativos (%). Mantener la proporción de la imagen es crucial, por lo que generalmente se define solo uno de estos atributos o ambos con proporción.</td>
+            </tr>
+            <tr>
+                <td>Eliminar el Borde</td>
+                <td>border, border-style</td>
+                <td>Las imágenes dentro de enlaces pueden tener un borde por defecto en algunos navegadores. Se elimina configurando <code>border</code> o <code>border-style</code> a <code>none</code>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
